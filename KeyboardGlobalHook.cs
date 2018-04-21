@@ -265,9 +265,9 @@ namespace MyKeyChanger {
             { ScanCode.X, new KeySet( VirtualKey.ScrollLock, ScanCode.ScrollLock,Flags.None)},              // Scroll Lock
             { ScanCode.C, new KeySet( VirtualKey.Pause, ScanCode.Pause,Flags.None)},                        // Pause
             { ScanCode.V, new KeySet( VirtualKey.CapsLock, ScanCode.CapsLock,Flags.None)},                  // Caps
-            { ScanCode.N, new KeySet( VirtualKey.Delete, ScanCode.Delete,Flags.None)},                      // Delete
-            { ScanCode.M, new KeySet( VirtualKey.BackSpace, ScanCode.BackSpace,Flags.None)},                // BackSpace
-            { ScanCode.GreaterThan, new KeySet( VirtualKey.Escape, ScanCode.Escape,Flags.None)},               // Escape
+            { ScanCode.M, new KeySet( VirtualKey.Delete, ScanCode.Delete,Flags.None)},                      // Delete
+            { ScanCode.LessThan, new KeySet( VirtualKey.BackSpace, ScanCode.BackSpace,Flags.None)},         // BackSpace
+            { ScanCode.Slash, new KeySet( VirtualKey.Escape, ScanCode.Escape,Flags.None)},                  // Escape
         };
 
         // User4(@)

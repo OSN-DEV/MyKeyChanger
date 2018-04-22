@@ -257,6 +257,8 @@ namespace MyKeyChanger {
             { ScanCode.A, new KeySet( VirtualKey.F11, ScanCode.F11,Flags.None)},                            // F11
             { ScanCode.S, new KeySet( VirtualKey.F12, ScanCode.F12,Flags.None)},                            // F12
             { ScanCode.F, new KeySet( VirtualKey.Kanji, ScanCode.Kanji,Flags.None)},                        // 半角/英数
+            { ScanCode.J, new KeySet( VirtualKey.Home, ScanCode.Home,Flags.ExtendeKey)},                    // Home
+            { ScanCode.K, new KeySet( VirtualKey.End, ScanCode.End,Flags.ExtendeKey)},                      // End
             { ScanCode.L, new KeySet( VirtualKey.Enter, ScanCode.Enter,Flags.None)},                        // Enter
             { ScanCode.SemiColon, new KeySet( VirtualKey.Tab, ScanCode.Tab,Flags.ExtendeKey)},              // Tab
             
@@ -265,8 +267,8 @@ namespace MyKeyChanger {
             { ScanCode.X, new KeySet( VirtualKey.ScrollLock, ScanCode.ScrollLock,Flags.None)},              // Scroll Lock
             { ScanCode.C, new KeySet( VirtualKey.Pause, ScanCode.Pause,Flags.None)},                        // Pause
             { ScanCode.V, new KeySet( VirtualKey.CapsLock, ScanCode.CapsLock,Flags.None)},                  // Caps
-            { ScanCode.M, new KeySet( VirtualKey.Delete, ScanCode.Delete,Flags.None)},                      // Delete
-            { ScanCode.LessThan, new KeySet( VirtualKey.BackSpace, ScanCode.BackSpace,Flags.None)},         // BackSpace
+            { ScanCode.N, new KeySet( VirtualKey.Delete, ScanCode.Delete,Flags.None)},                      // Delete
+            { ScanCode.M, new KeySet( VirtualKey.BackSpace, ScanCode.BackSpace,Flags.None)},                // BackSpace
             { ScanCode.Slash, new KeySet( VirtualKey.Escape, ScanCode.Escape,Flags.None)},                  // Escape
         };
 

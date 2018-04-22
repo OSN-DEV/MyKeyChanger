@@ -11,7 +11,7 @@
 
 
 ## キーマッピング
-![00_planck_default](https://user-images.githubusercontent.com/31182578/39094897-5c4b994e-4672-11e8-9090-20e0d1235ab7.jpg)
+![00_planck_default](https://user-images.githubusercontent.com/31182578/39094964-8b5db7b6-4673-11e8-96e1-4bacaf3f08d3.jpg)
 ![01_planck_user1](https://user-images.githubusercontent.com/31182578/39083996-1fc9283e-45a9-11e8-986e-2ff5a29ec5a8.jpg)
 ![02_planck_user2](https://user-images.githubusercontent.com/31182578/39083997-1fefd9e8-45a9-11e8-893f-5a482997ff90.jpg)
 ![03_planck_user3](https://user-images.githubusercontent.com/31182578/39092183-b3ab5d44-4642-11e8-8fc7-858b024d67d0.jpg)

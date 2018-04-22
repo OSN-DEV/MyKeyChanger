@@ -302,9 +302,10 @@ namespace MyKeyChanger {
 
         // single
         private static Dictionary<ushort, KeySet> _normalConvert = new Dictionary<ushort, KeySet> {
-            // line 4
-            { ScanCode.BackSlash, new KeySet( 0, 0x3093, Flags.Unicode)},                                   // 
+            { ScanCode.P, new KeySet( VirtualKey.SemiColon, ScanCode.SemiColon,Flags.None)},                // 
+            { ScanCode.SemiColon, new KeySet( VirtualKey.P, ScanCode.P,Flags.None)},                        // 
             { ScanCode.Astarsk, new KeySet( VirtualKey.Minus, ScanCode.Minus,Flags.None)},                  // 
+            { ScanCode.BackSlash, new KeySet( 0, 0x3093, Flags.Unicode)},                                   // ん
         };
 
         private static Dictionary<int, Dictionary<ushort, KeySet>> _convertMappingList = new Dictionary<int, Dictionary<ushort, KeySet>> {

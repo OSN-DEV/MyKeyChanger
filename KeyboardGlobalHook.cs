@@ -200,12 +200,24 @@ namespace MyKeyChanger {
             { ScanCode.P, new KeySet( VirtualKey.Num0, ScanCode.Num0,Flags.None)},                          // 0
 
             // line 3
+            { ScanCode.A, new KeySet( VirtualKey.Caret, ScanCode.Caret,Flags.None)},                        // へ
+            { ScanCode.S, new KeySet( VirtualKey.BackSlash, ScanCode.BackSlash,Flags.None)},                // ろ
+            { ScanCode.D, new KeySet( VirtualKey.BracketsR, ScanCode.BracketsR,Flags.None)},                // む
+            { ScanCode.F, new KeySet( VirtualKey.Yen, ScanCode.Yen,Flags.None)},                            // ー
+            { ScanCode.G, new KeySet( 0, 0x3063, Flags.Unicode)},                                           // っ
+            { ScanCode.H, new KeySet( 0, 0x3092, Flags.Unicode)},
+
             { ScanCode.J, new KeySet( VirtualKey.Home, ScanCode.Home,Flags.ExtendeKey)},                    // Home
             { ScanCode.K, new KeySet( VirtualKey.End, ScanCode.End,Flags.ExtendeKey)},                      // End
             { ScanCode.L, new KeySet( VirtualKey.Enter, ScanCode.Enter,Flags.None)},                        // Enter 
             { ScanCode.SemiColon, new KeySet( VirtualKey.BackSpace, ScanCode.BackSpace,Flags.ExtendeKey)},  // BackSpace
 
             // line 2
+            { ScanCode.Z, new KeySet( 0, 0x3092, Flags.Unicode)},                                           // を
+            { ScanCode.X,  new KeySet( VirtualKey.Minus, ScanCode.Minus,Flags.None)},                       // ほ
+            { ScanCode.C, new KeySet( VirtualKey.Astarsk, ScanCode.Astarsk,Flags.None)},                    // け
+            { ScanCode.V, new KeySet( 0, 0x3063, Flags.Unicode)},                                           // っ
+
             { ScanCode.N, new KeySet( VirtualKey.Delete, ScanCode.Delete,Flags.ExtendeKey)},                // Delete
             { ScanCode.M, new KeySet( VirtualKey.PageUp, ScanCode.PageUp,Flags.ExtendeKey)},                // Page Up
             { ScanCode.LessThan, new KeySet( VirtualKey.PageDown, ScanCode.PageDown,Flags.ExtendeKey)},     // Page Down
@@ -228,6 +240,15 @@ namespace MyKeyChanger {
             { ScanCode.P, new KeySet( VirtualKey.Num0, ScanCode.Num0,Flags.None)},                          // 0
 
             // line 3
+            { ScanCode.A, new KeySet( 0, 0x3063, Flags.Unicode)},                                           // っ
+            { ScanCode.S, new KeySet( VirtualKey.Minus, ScanCode.Minus,Flags.None)},                        // ほ
+            { ScanCode.D, new KeySet( VirtualKey.Astarsk, ScanCode.Astarsk,Flags.None)},                    // け
+            { ScanCode.F, new KeySet( VirtualKey.Num0, ScanCode.Num0,Flags.None)},                          // 0
+            { ScanCode.G, new KeySet( 0, 0x3092, Flags.Unicode)},                                           // を
+            { ScanCode.H, new KeySet( 0, 0x3083, Flags.Unicode)},                                           // ゃ
+            { ScanCode.J, new KeySet( 0, 0x3085, Flags.Unicode)},                                           // ゅ
+            { ScanCode.K, new KeySet( 0, 0x3087, Flags.Unicode)},                                           // ょ
+
             { ScanCode.L, new KeySet( VirtualKey.Enter, ScanCode.Enter,Flags.None)},                        // Enter
             { ScanCode.SemiColon, new KeySet( VirtualKey.Tab, ScanCode.Tab,Flags.ExtendeKey)},              // Tab
 
@@ -303,7 +324,7 @@ namespace MyKeyChanger {
         // single
         private static Dictionary<ushort, KeySet> _normalConvert = new Dictionary<ushort, KeySet> {
             //{ ScanCode.P, new KeySet( VirtualKey.SemiColon, ScanCode.SemiColon,Flags.None)},                // 
-            { ScanCode.SemiColon, new KeySet( VirtualKey.P, ScanCode.P,Flags.None)},                        // 
+            //{ ScanCode.SemiColon, new KeySet( VirtualKey.P, ScanCode.P,Flags.None)},                        // 
             { ScanCode.Astarsk, new KeySet( VirtualKey.Minus, ScanCode.Minus,Flags.None)},                  // 
             { ScanCode.BackSlash, new KeySet( 0, 0x3093, Flags.Unicode)},                                   // ん
         };

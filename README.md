@@ -11,11 +11,10 @@
 
 
 ## キーマッピング
-![00_planck_default](https://user-images.githubusercontent.com/31182578/39094964-8b5db7b6-4673-11e8-96e1-4bacaf3f08d3.jpg)
-![01_planck_user1](https://user-images.githubusercontent.com/31182578/39083996-1fc9283e-45a9-11e8-986e-2ff5a29ec5a8.jpg)
-![02_planck_user2](https://user-images.githubusercontent.com/31182578/39083997-1fefd9e8-45a9-11e8-893f-5a482997ff90.jpg)
-![03_planck_user3](https://user-images.githubusercontent.com/31182578/39092183-b3ab5d44-4642-11e8-8fc7-858b024d67d0.jpg)
-![04_planck_user4](https://user-images.githubusercontent.com/31182578/39083999-203f69e0-45a9-11e8-8263-31e7f6738b3f.jpg)
+![00_default](https://user-images.githubusercontent.com/31182578/40883648-6d1bf9c6-673d-11e8-998c-f8639c6db23f.jpg)
+![01_F14](https://user-images.githubusercontent.com/31182578/40883651-7c3bac62-673d-11e8-86df-37788d5878c3.jpg)
+![02_F13](https://user-images.githubusercontent.com/31182578/40883653-87ed45c0-673d-11e8-9710-d4a5bac17507.jpg)
+![03_FN2](https://user-images.githubusercontent.com/31182578/40883654-9281ac2e-673d-11e8-9ad6-081ac967c812.jpg)
 
 
 
@@ -28,5 +27,8 @@
 ## その他
 以下の単一キー変換はレジストリの設定をいじっています。あとキーボードのDipスイッチもデフォルトから変更して左FnをCtrlに変更しています
 * CapsLock → F13
+* Tab → F14
 * Windows(左) → Alt(左)
 * 半角/全角 → Windows(左)
+* Shift(右) → Tab
+

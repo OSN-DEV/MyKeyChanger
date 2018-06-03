@@ -159,7 +159,7 @@ namespace MyKeyChanger {
             public const int User2 = 0x01 << 2;
             public const int User3 = 0x01 << 3;
             public const int User4 = 0x01 << 4;
-
+            public const int User5 = 0x01 << 5;
         }
         private static int _modified = ModifiedKey.None;
 
@@ -168,7 +168,8 @@ namespace MyKeyChanger {
             { ScanCode.F14, ModifiedKey.User1 },
             { ScanCode.F13, ModifiedKey.User2 },
             { ScanCode.AtMark, ModifiedKey.User3 },
-            //{ ScanCode.AtMark, ModifiedKey.User4 },
+            { ScanCode.Muhenkan, ModifiedKey.User4 },
+            { ScanCode.Henkan, ModifiedKey.User5 },
         };
 
 
@@ -270,9 +271,93 @@ namespace MyKeyChanger {
             { ScanCode.V, new KeySet( VirtualKey.AtMark, ScanCode.AtMark,Flags.None)},                      // @
         };
 
+        // User4(Muhenkan)
+        private static Dictionary<ushort, KeySet> _convertMapping4 = new Dictionary<ushort, KeySet> {
+            // line 5
+            { ScanCode.Num1, new KeySet( VirtualKey.F1, ScanCode.F1,Flags.None)},                           // F1
+            { ScanCode.Num2, new KeySet( VirtualKey.F2, ScanCode.F2,Flags.None)},                           // F2
+            { ScanCode.Num3, new KeySet( VirtualKey.F3, ScanCode.F3,Flags.None)},                           // F3
+            { ScanCode.Num4, new KeySet( VirtualKey.F4, ScanCode.F4,Flags.None)},                           // F4
+            { ScanCode.Num5, new KeySet( VirtualKey.F5, ScanCode.F5,Flags.None)},                           // F5
+            { ScanCode.Num6, new KeySet( VirtualKey.F6, ScanCode.F6,Flags.None)},                           // F6
+            { ScanCode.Num7, new KeySet( VirtualKey.F7, ScanCode.F7,Flags.None)},                           // F7
+            { ScanCode.Num8, new KeySet( VirtualKey.F8, ScanCode.F8,Flags.None)},                           // F8
+            { ScanCode.Num9, new KeySet( VirtualKey.F9, ScanCode.F9,Flags.None)},                           // F9
+            { ScanCode.Num0, new KeySet( VirtualKey.F10, ScanCode.F10,Flags.None)},                         // F10
+            { ScanCode.Minus, new KeySet( VirtualKey.F11, ScanCode.F11,Flags.None)},                        // F11
+            { ScanCode.Caret, new KeySet( VirtualKey.F12, ScanCode.F12,Flags.None)},                        // F12
 
+            // line 4
+            { ScanCode.Q, new KeySet( VirtualKey.Num1, ScanCode.Num1,Flags.None)},                          // 1
+            { ScanCode.W, new KeySet( VirtualKey.Num2, ScanCode.Num2,Flags.None)},                          // 2
+            { ScanCode.E, new KeySet( VirtualKey.Num3, ScanCode.Num3,Flags.None)},                          // 3
+            { ScanCode.R, new KeySet( VirtualKey.Num4, ScanCode.Num4,Flags.None)},                          // 4
+            { ScanCode.T, new KeySet( VirtualKey.Num5, ScanCode.Num5,Flags.None)},                          // 5
+            { ScanCode.Y, new KeySet( VirtualKey.Num6, ScanCode.Num6,Flags.None)},                          // 6
+            { ScanCode.U, new KeySet( VirtualKey.Num7, ScanCode.Num7,Flags.None)},                          // 7
+            { ScanCode.I, new KeySet( VirtualKey.Num8, ScanCode.Num8,Flags.None)},                          // 8
+            { ScanCode.O, new KeySet( VirtualKey.Num9, ScanCode.Num9,Flags.None)},                          // 9
+            { ScanCode.P, new KeySet( VirtualKey.Num0, ScanCode.Num0,Flags.None)},                          // 0
 
+            // line 3
+            { ScanCode.A, new KeySet( VirtualKey.Caret, ScanCode.Caret,Flags.None)},                        // へ
+            { ScanCode.S, new KeySet( VirtualKey.BackSlash, ScanCode.BackSlash,Flags.None)},                // ろ
+            { ScanCode.D, new KeySet( VirtualKey.BracketsR, ScanCode.BracketsR,Flags.None)},                // む
+            { ScanCode.F, new KeySet( VirtualKey.Yen, ScanCode.Yen,Flags.None)},                            // ー
+            { ScanCode.G, new KeySet( 0, 0x3063, Flags.Unicode)},                                           // っ
+            { ScanCode.H, new KeySet( 0, 0x3092, Flags.Unicode)},
 
+            { ScanCode.J, new KeySet( VirtualKey.Home, ScanCode.Home,Flags.ExtendeKey)},                    // Home
+            { ScanCode.K, new KeySet( VirtualKey.End, ScanCode.End,Flags.ExtendeKey)},                      // End
+            { ScanCode.L, new KeySet( VirtualKey.Enter, ScanCode.Enter,Flags.None)},                        // Enter 
+            { ScanCode.SemiColon, new KeySet( VirtualKey.BackSpace, ScanCode.BackSpace,Flags.ExtendeKey)},  // BackSpace
+
+            // line 2
+            { ScanCode.Z, new KeySet( 0, 0x3092, Flags.Unicode)},                                           // を
+            { ScanCode.X,  new KeySet( VirtualKey.Minus, ScanCode.Minus,Flags.None)},                       // ほ
+            { ScanCode.C, new KeySet( VirtualKey.Astarsk, ScanCode.Astarsk,Flags.None)},                    // け
+            { ScanCode.V, new KeySet( 0, 0x3063, Flags.Unicode)},                                           // っ
+
+            { ScanCode.N, new KeySet( VirtualKey.Delete, ScanCode.Delete,Flags.ExtendeKey)},                // Delete
+            { ScanCode.M, new KeySet( VirtualKey.PageUp, ScanCode.PageUp,Flags.ExtendeKey)},                // Page Up
+            { ScanCode.LessThan, new KeySet( VirtualKey.PageDown, ScanCode.PageDown,Flags.ExtendeKey)},     // Page Down
+
+            // line 1
+        };
+
+        // User5(Henkan)
+        private static Dictionary<ushort, KeySet> _convertMapping5 = new Dictionary<ushort, KeySet> {
+            // line 4
+            { ScanCode.Q, new KeySet( VirtualKey.Num1, ScanCode.Num1,Flags.None)},                          // 1
+            { ScanCode.W, new KeySet( VirtualKey.Num2, ScanCode.Num2,Flags.None)},                          // 2
+            { ScanCode.E, new KeySet( VirtualKey.Num3, ScanCode.Num3,Flags.None)},                          // 3
+            { ScanCode.R, new KeySet( VirtualKey.Num4, ScanCode.Num4,Flags.None)},                          // 4
+            { ScanCode.T, new KeySet( VirtualKey.Num5, ScanCode.Num5,Flags.None)},                          // 5
+            { ScanCode.Y, new KeySet( VirtualKey.Num6, ScanCode.Num6,Flags.None)},                          // 6
+            { ScanCode.U, new KeySet( VirtualKey.Num7, ScanCode.Num7,Flags.None)},                          // 7
+            { ScanCode.I, new KeySet( VirtualKey.Num8, ScanCode.Num8,Flags.None)},                          // 8
+            { ScanCode.O, new KeySet( VirtualKey.Num9, ScanCode.Num9,Flags.None)},                          // 9
+            { ScanCode.P, new KeySet( VirtualKey.Num0, ScanCode.Num0,Flags.None)},                          // 0
+
+            // line 3
+            { ScanCode.A, new KeySet( 0, 0x3063, Flags.Unicode)},                                           // っ
+            { ScanCode.S, new KeySet( VirtualKey.Minus, ScanCode.Minus,Flags.None)},                        // ほ
+            { ScanCode.D, new KeySet( VirtualKey.Astarsk, ScanCode.Astarsk,Flags.None)},                    // け
+            { ScanCode.F, new KeySet( VirtualKey.Num0, ScanCode.Num0,Flags.None)},                          // 0
+            { ScanCode.G, new KeySet( 0, 0x3092, Flags.Unicode)},                                           // を
+            { ScanCode.H, new KeySet( 0, 0x3083, Flags.Unicode)},                                           // ゃ
+            { ScanCode.J, new KeySet( 0, 0x3085, Flags.Unicode)},                                           // ゅ
+            { ScanCode.K, new KeySet( 0, 0x3087, Flags.Unicode)},                                           // ょ
+
+            { ScanCode.L, new KeySet( VirtualKey.Enter, ScanCode.Enter,Flags.None)},                        // Enter
+            { ScanCode.SemiColon, new KeySet( VirtualKey.Tab, ScanCode.Tab,Flags.ExtendeKey)},              // Tab
+
+            // line 2
+            { ScanCode.M, new KeySet( VirtualKey.Left, ScanCode.Left,Flags.ExtendeKey)},                    // Left
+            { ScanCode.LessThan, new KeySet( VirtualKey.Down, ScanCode.Down,Flags.ExtendeKey)},             // Down
+            { ScanCode.GreaterThan, new KeySet( VirtualKey.Up, ScanCode.Up,Flags.ExtendeKey)},              // Up
+            { ScanCode.Slash, new KeySet( VirtualKey.Right, ScanCode.Right,Flags.ExtendeKey)},              // Right
+        };
 
 
         // single
@@ -287,7 +372,8 @@ namespace MyKeyChanger {
             { ModifiedKey.User1, _convertMapping1},
             { ModifiedKey.User2, _convertMapping2},
             { ModifiedKey.User3, _convertMapping3},
-            //{ ModifiedKey.User4, _convertMapping4},
+            { ModifiedKey.User4, _convertMapping4},
+            { ModifiedKey.User5, _convertMapping5},
         };
         #endregion
 
